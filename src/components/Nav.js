@@ -93,7 +93,7 @@ const hoverColor = name =>
 const MobileFlag = styled(Flag)`
   display: block;
   ${theme.mediaQueries.lg} {
-      display: none;
+    display: none;
   }
   ${theme}
 `
@@ -101,14 +101,14 @@ const MobileFlag = styled(Flag)`
 const ResponsiveFlag = styled(Flag)`
   display: none;
   ${theme.mediaQueries.lg} {
-      display: block;
+    display: block;
   }
-  ${props => (props.scrolled) ?
-    null :
-  css`
-  transform: scale(1.5);
-`
-}
+  ${props =>
+    props.scrolled
+      ? null
+      : css`
+          transform: scale(1.5);
+        `}
 `
 
 const NavBar = styled(Box.withComponent('nav'))`
@@ -155,7 +155,6 @@ const NavBar = styled(Box.withComponent('nav'))`
         `
       : // Fix this for wierd mobile nav transition
         css`
-          
           @media (min-width: 56em) {
             display: flex;
             // justify-content: spaced-between;
@@ -178,14 +177,13 @@ const NavBar = styled(Box.withComponent('nav'))`
 const ClientButton = styled(OutlineButton)`
   width: 15vw;
   margin: 10px;
-  ${theme.mediaQueries.lg}{
+  ${theme.mediaQueries.lg} {
     margin: 10px;
   }
 `
 
 const Navigation = props => (
   <NavBar role="navigation" {...props}>
-    
     <Link to="/#services" children="Team" />
     <Link to="/#testimonials" children="News & Updates" />
     <ResponsiveFlag scrolled={props.scrolled} />
@@ -335,7 +333,7 @@ class Header extends Component {
       >
         <Content>
           {/* <Container> */}
-          <MobileFlag  scrolled={scrolled || fixed} />
+          <MobileFlag scrolled={scrolled || fixed} />
           {/* <MenuHeader
             // color={}
             fontSize={1}
@@ -354,10 +352,14 @@ class Header extends Component {
           </MenuHeader> */}
           {/* <Link to="/#services" children="Services" onClick={this.handleToggleMenu} /> */}
           {/* </Container> */}
-          <Navigation  scrolled={scrolled || fixed} color={baseColor} dark={dark} toggled={toggled} />
+          <Navigation
+            scrolled={scrolled || fixed}
+            color={baseColor}
+            dark={dark}
+            toggled={toggled}
+          />
           <ToggleContainer color={toggleColor}>
             <Toggle
-              
               glyph={toggled ? 'view-close' : 'menu'}
               toggled={toggled}
               onClick={toggled ? this.handleToggleMenu : this.handleToggleMenu}

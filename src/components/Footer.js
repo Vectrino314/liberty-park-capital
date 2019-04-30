@@ -104,17 +104,16 @@ const Footer = ({ dark = false, children, ...props }) => (
     {children}
 
     <Flex wrap align="center" justify="space-around">
-    <Box fontSize={2}>
+      <Box fontSize={2}>
         <Text>Office: 3103 BEE CAVES RD, Suite 100, Austin, TX 78746</Text>
         <Text>Mail: 3103 BEE CAVES RD, Suite 100, Austin, TX 78746</Text>
       </Box>
       <Box>
-      <Text my={2}>
+        <Text my={2}>
           <a href="tel:1-915-204-0674">1-915-204-0674</a>
           <br />
           <Text.span color="muted" children="(call toll-free)" />
           <br />
-          
         </Text>
       </Box>
     </Flex>
@@ -122,12 +121,13 @@ const Footer = ({ dark = false, children, ...props }) => (
     <Container px={3} mt={[3, 4]}>
       <BottomLine mt={3}>
         <Text fontSize={1} mt={2} color="muted">
-          © {new Date().getFullYear()} Website by {' '}
-          <a href="https://ardorem.tech"
-          target="_blank"
-          rel="noopener noreferrer"
+          © {new Date().getFullYear()} Website by{' '}
+          <a
+            href="https://ardorem.tech"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-          Victor Solis
+            Victor Solis
           </a>
         </Text>
       </BottomLine>

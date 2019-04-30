@@ -13,7 +13,7 @@ import {
   Text,
   Sheet,
   Card,
-  theme
+  theme,
 } from '@hackclub/design-system'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
@@ -28,16 +28,15 @@ import {
   Subhline,
   Featline,
   Lead,
-  AnimatedHighlight
+  AnimatedHighlight,
 } from 'components/Content'
 
-import BackgroundImage from '@hackclub/design-system/dist/BackgroundImage';
-
+import BackgroundImage from '@hackclub/design-system/dist/BackgroundImage'
 
 const cta = {
   chevronRight: true,
   color: 'white',
-  scale: "true"
+  scale: 'true',
 }
 const CTA = styled(Button.withComponent(Link)).attrs(cta)`
   background-image: ${theme.gradient('pink.5', 'red.6')};
@@ -45,7 +44,7 @@ const CTA = styled(Button.withComponent(Link)).attrs(cta)`
 const StartCTA = styled(Button.withComponent(Link)).attrs({
   ...cta,
   fontSize: [4, 5],
-  px: [4, 5]
+  px: [4, 5],
 })`
   background-image: ${theme.gradient('yellow.5', 'orange.3')};
 `
@@ -53,7 +52,7 @@ const StartCTA = styled(Button.withComponent(Link)).attrs({
 const PaymentCTA = styled(Button).attrs({
   ...cta,
   fontSize: [4, 5],
-  px: [4, 5]
+  px: [4, 5],
 })`
   background-image: ${theme.gradient('red.6', 'orange.3')};
 `
@@ -70,30 +69,29 @@ const Hero = styled(BackgroundImage.withComponent(Card)).attrs({
   boxShadow: 'xl',
   bg: '#DDDAAA',
   src: '/Liberty_Large.jpg',
-  'aria-label': 'Hero Background Image'
+  'aria-label': 'Hero Background Image',
 })`
   ${promoBG};
 
-
   ${theme.mediaQueries.lg} {
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
   }
 `
 
 const Promo = styled(Box.withComponent('section')).attrs({
   bg: 'teal.6',
   align: 'center',
-  pt: [4, 5, 6]
+  pt: [4, 5, 6],
 })`
   ${promoBG};
 `
 const PromoMegaline = styled(Heading.h1).attrs({
   color: 'white',
   fontSize: [4, 8, 9],
-  pb: 2
+  pb: 2,
 })`
-font-family: 'Spectral', serif;
+  font-family: 'Spectral', serif;
   letter-spacing: -0.015em;
   line-height: 1;
   + ${Lead} {
@@ -103,7 +101,7 @@ font-family: 'Spectral', serif;
 `
 const PromoSmallCTA = styled(Button.withComponent(Link)).attrs({
   ...cta,
-  bg: 'teal.6'
+  bg: 'teal.6',
 })``
 
 const HeadlineIcon = styled(GlowingIcon)`
@@ -140,7 +138,7 @@ const MegaQuote = styled(Quote).attrs({
   px: [3, 4, 5],
   pt: 6,
   pb: [4, 5],
-  color: 'white'
+  color: 'white',
 })`
   background-image: radial-gradient(
     ellipse farthest-corner at top left,
@@ -183,7 +181,7 @@ const FeatureLine = styled(Box).attrs({
   bg: 'primary',
   width: 1,
   mt: 2,
-  mb: -2
+  mb: -2,
 })`
   border-radius: ${theme.radius};
   height: 4px;
@@ -207,7 +205,6 @@ const ResourcesLine = styled(FeatureLine)`
 
 const Base = styled(Box.section).attrs({ bg: 'dark', color: 'gray.3' })``
 
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Liberty" keywords={[`gatsby`, `application`, `react`]} />
@@ -217,12 +214,15 @@ const IndexPage = () => (
     <Hero>
       <Container maxWidth={72} px={3} py={[5, 6]}>
         <Flex align="center" justify="center" flexDirection="column">
-
-          <PromoMegaline color="white" fontSize={[3, 3, 8]} mt={[6, 4, 6]} pb={1}>
+          <PromoMegaline
+            color="white"
+            fontSize={[3, 3, 8]}
+            mt={[6, 4, 6]}
+            pb={1}
+          >
             LIBERTY PARK CAPITAL
-        </PromoMegaline>
+          </PromoMegaline>
           {/* <Announcement /> */}
-
         </Flex>
       </Container>
       <Container maxWidth={72} px={3}>
@@ -241,7 +241,6 @@ const IndexPage = () => (
             through our products.
           </Text> */}
         </Flex>
-
       </Container>
     </Hero>
 
@@ -254,40 +253,28 @@ const IndexPage = () => (
             aria-label="bolt icon"
             size={72}
             ml={2}
-
           />
           <Box>
             <PromoMegaline fontize={[2, 1, 1]} pb={1}>
               Monthly Reports
-        </PromoMegaline>
-            <Lead
-              fontSize={[3, 4, 5]}
-              color="white"
-            >
+            </PromoMegaline>
+            <Lead fontSize={[3, 4, 5]} color="white">
               Get monthly reports and see how your capital is doing.
-        </Lead>
-            <StartCTA mt={[2, 3, 3]}>
-              Monthly Reports
-        </StartCTA>
+            </Lead>
+            <StartCTA mt={[2, 3, 3]}>Monthly Reports</StartCTA>
           </Box>
         </Flex>
       </Container>
       <Container maxWidth={72} px={3} py={[5, 6]}>
         <Flex align="center" justify="center">
-
           <Box>
             <PromoMegaline fontize={[2, 1, 1]} pb={1}>
               Investor Letters
-        </PromoMegaline>
-            <Lead
-              fontSize={[3, 4, 5]}
-              color="white"
-            >
+            </PromoMegaline>
+            <Lead fontSize={[3, 4, 5]} color="white">
               Access to Investor Letters.
-        </Lead>
-            <StartCTA mt={[2, 3, 3]}>
-              Investor Letters
-        </StartCTA>
+            </Lead>
+            <StartCTA mt={[2, 3, 3]}>Investor Letters</StartCTA>
           </Box>
           <HeadlineIcon
             glyph="docs"
@@ -295,7 +282,7 @@ const IndexPage = () => (
             aria-label="doc icon"
             size={72}
           />
-        </Flex >
+        </Flex>
       </Container>
 
       <Container maxWidth={72} px={3} py={[5, 6]}>
@@ -306,40 +293,28 @@ const IndexPage = () => (
             aria-label="bank icon"
             size={72}
             ml={2}
-
           />
           <Box>
             <PromoMegaline fontize={[2, 1, 1]} pb={1}>
               TearSheets
-        </PromoMegaline>
-            <Lead
-              fontSize={[3, 4, 5]}
-              color="white"
-            >
+            </PromoMegaline>
+            <Lead fontSize={[3, 4, 5]} color="white">
               Access to tearsheet.
-        </Lead>
-            <StartCTA mt={[2, 3, 3]}>
-              Tearsheet
-        </StartCTA>
+            </Lead>
+            <StartCTA mt={[2, 3, 3]}>Tearsheet</StartCTA>
           </Box>
         </Flex>
       </Container>
       <Container maxWidth={72} px={3} py={[5, 6]}>
         <Flex align="center" justify="center">
-
           <Box>
             <PromoMegaline fontize={[2, 1, 1]} pb={1}>
               PitchBook
-        </PromoMegaline>
-            <Lead
-              fontSize={[3, 4, 5]}
-              color="white"
-            >
+            </PromoMegaline>
+            <Lead fontSize={[3, 4, 5]} color="white">
               Access to PitchBook.
-        </Lead>
-            <StartCTA mt={[2, 3, 3]}>
-              PitchBook
-        </StartCTA>
+            </Lead>
+            <StartCTA mt={[2, 3, 3]}>PitchBook</StartCTA>
           </Box>
           <HeadlineIcon
             glyph="payment-docs"
@@ -347,7 +322,7 @@ const IndexPage = () => (
             aria-label="bolt icon"
             size={72}
           />
-        </Flex >
+        </Flex>
       </Container>
     </Promo>
     <Footer />
