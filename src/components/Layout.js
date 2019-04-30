@@ -22,7 +22,7 @@ export default ({ bg, children }) => (
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content={theme.colors.primary} />
-      {meta([
+      {/* {meta([
         { name: 'description', content: description },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '' },
@@ -37,7 +37,7 @@ export default ({ bg, children }) => (
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: url },
-      ])}
+      ])} */}
       {/* <script
         children={`${serviceWorkerKiller.toString()}; serviceWorkerKiller()`}
       /> */}
