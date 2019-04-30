@@ -73,7 +73,7 @@ class Upload extends Component {
       const formData = new FormData();
       formData.append("file", file, file.name);
 
-      req.open("POST", "https://infallible-babbage-51a4f3.netlify.com/upload");
+      req.open("POST", "https:/demo.ardorem.tech/upload");
       req.send(formData);
     });
   }
