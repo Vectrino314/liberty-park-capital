@@ -1,0 +1,39 @@
+{
+  "name": "Ardorem Technologies",
+  "title": "Ardorem: Aspiring to solve your concerns",
+  "description": " Ardorem is a tech startup geared to solving unique cases in the world with a strong resolve to quality and the passion to make a difference",
+  "url": "https://ardorem.tech",
+  "twitter": "@ardorem",
+  "img": "https://ardorem.tech/Ardorem_Sun.svg",
+  "stats": {
+    "percentage_of_us_high_schools": "2%",
+    "school_count": 5,
+    "state_count": 5,
+    "country_count": 1,
+    "slack_count": 3809,
+    "approximate_members": "3K+"
+  },
+  "springPromo": {
+    "currentApplications": 0,
+    "applicationSlots": 100,
+    "deadline": "2019-04-26"
+  },
+  "org": {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Ardorem Technologies",
+    "url": "https://ardorem.tech",
+    "logo": "https://ardorem.tech/Ardorem_Sun.svg",
+    "sameAs": [
+      
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "email": "vectrino314@gmail.com",
+        "contactType": "customer support",
+        "url": "https://ardorem.tech"
+      }
+    ]
+  }
+}
