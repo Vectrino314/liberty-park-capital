@@ -207,7 +207,7 @@ const Base = styled(Box.section).attrs({ bg: 'dark', color: 'gray.3' })``
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Liberty" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Liberty" description="Demo site for Liberty Park Capital" keywords={[`gatsby`, `application`, `react`]} />
 
     <Nav bg="#AAAAAA" color="black" />
 

@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
 
 export default ({ bg, children }) => (
   <ThemeProvider>
-    <Helmet defaultTitle={title}>
+    <Helmet >
       <html lang="en" />
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
