@@ -30,16 +30,9 @@ import {
   Lead,
   AnimatedHighlight
 } from 'components/Content'
-// import { timeTo } from 'helpers'
-import { stats, springPromo } from 'data.json'
-// import Announcement from 'components/home/Announcement'
-import DefineCard from '../components/home/DefineCard'
-import FeaturedServices from 'components/home/FeaturedServices'
 
-import SpringPromo from '../components/home/SpringPromo';
-import GalleryModal from '../components/home/GalleryModal';
 import BackgroundImage from '@hackclub/design-system/dist/BackgroundImage';
-import Login from '../components/auth/LoginForm';
+
 
 const cta = {
   chevronRight: true,
