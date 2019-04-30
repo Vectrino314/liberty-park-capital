@@ -184,12 +184,12 @@ const ClientButton = styled(OutlineButton)`
 
 const Navigation = props => (
   <NavBar role="navigation" {...props}>
-    <Link to="/#services" children="Team" />
-    <Link to="/#testimonials" children="News & Updates" />
+    <Link to="/" children="Team" />
+    <Link to="/" children="News & Updates" />
     <ResponsiveFlag scrolled={props.scrolled} />
     {/* <Link to="/#gallery" children="Gallery" /> */}
-    <Link to="/#contact" children="Firm Overview" />
-    <Link to="/#contact" children="Contact" />
+    <Link to="/" children="Firm Overview" />
+    <Link to="/" children="Contact" />
 
     {/* <Link to="/workshops/" children="Workshops" /> */}
     {/* <a
