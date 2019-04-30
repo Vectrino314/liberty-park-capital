@@ -4,7 +4,7 @@
   "description": "Demo Site for Liberty Park Capital",
   "url": "https://demo.ardorem.tech",
   "twitter": "@ardorem",
-  "img": "https://demo.ardorem.tech/static/Liberty_Large.jpg",
+  "img": "/Liberty_Large.jpg",
   "stats": {
     "percentage_of_us_high_schools": "2%",
     "school_count": 5,
