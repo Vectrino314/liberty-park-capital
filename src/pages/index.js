@@ -222,6 +222,7 @@ const IndexPage = () => (
           >
             LIBERTY PARK CAPITAL
           </PromoMegaline>
+          
           {/* <Announcement /> */}
         </Flex>
       </Container>
@@ -240,8 +241,11 @@ const IndexPage = () => (
             Need a <strong>website</strong> or an <strong>app</strong>? Browse
             through our products.
           </Text> */}
+          
+      <StartCTA to="/upload">Upload Demo</StartCTA>
         </Flex>
       </Container>
+      
     </Hero>
 
     <Promo>
