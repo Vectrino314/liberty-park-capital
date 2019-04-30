@@ -110,7 +110,7 @@ const Footer = ({ dark = false, children, ...props }) => (
       </Box>
       <Box>
         <Text my={2}>
-          <a href="tel:1-915-204-0674">1-915-204-0674</a>
+          <a href="tel:1-512-391-1551"> 1-512-391-1551</a>
           <br />
           <Text.span color="muted" children="(call toll-free)" />
           <br />
