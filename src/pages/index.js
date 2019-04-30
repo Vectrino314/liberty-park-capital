@@ -46,7 +46,7 @@ const StartCTA = styled(Button.withComponent(Link)).attrs({
   fontSize: [4, 5],
   px: [4, 5],
 })`
-  background-image: ${theme.gradient('yellow.5', 'orange.3')};
+  background-image: ${theme.gradient('green.5', 'green.3')};
 `
 
 const PaymentCTA = styled(Button).attrs({
@@ -80,7 +80,7 @@ const Hero = styled(BackgroundImage.withComponent(Card)).attrs({
 `
 
 const Promo = styled(Box.withComponent('section')).attrs({
-  bg: 'teal.6',
+  bg: 'blue.6',
   align: 'center',
   pt: [4, 5, 6],
 })`
@@ -249,10 +249,10 @@ const IndexPage = () => (
         <Flex align="center" justify="center">
           <HeadlineIcon
             glyph="bank-circle"
-            color="orange.5"
+            color="green.6"
             aria-label="bolt icon"
             size={72}
-            ml={2}
+            mr={2}
           />
           <Box>
             <PromoMegaline fontize={[2, 1, 1]} pb={1}>
@@ -278,7 +278,7 @@ const IndexPage = () => (
           </Box>
           <HeadlineIcon
             glyph="docs"
-            color="orange.5"
+            color="green.6"
             aria-label="doc icon"
             size={72}
           />
@@ -289,7 +289,7 @@ const IndexPage = () => (
         <Flex align="center" justify="center">
           <HeadlineIcon
             glyph="slack-old"
-            color="orange.5"
+            color="green.6"
             aria-label="bank icon"
             size={72}
             ml={2}
@@ -318,7 +318,7 @@ const IndexPage = () => (
           </Box>
           <HeadlineIcon
             glyph="payment-docs"
-            color="orange.5"
+            color="green.6"
             aria-label="bolt icon"
             size={72}
           />
