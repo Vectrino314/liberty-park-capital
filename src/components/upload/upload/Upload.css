@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 16px;
+    padding-bottom: 16px;
     box-sizing: border-box;
     width: 100%;
   }
@@ -33,14 +34,17 @@
   }
   
   .Title {
+    margin-top: 20px;
     margin-bottom: 32px;
     color: #555;
+    font-size: 36px;
+    color: rgb(255, 255, 255);
   }
   
   .Filename {
     margin-bottom: 8px;
     font-size: 16px;
-    color: #555;
+    color: rgb(255, 255, 255);
   }
   
   .Row {
@@ -48,7 +52,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    height: 50px;
+    height: 80px;
     padding: 8px;
     overflow: hidden;
     box-sizing: border-box;
@@ -70,6 +74,7 @@
     font-family: "Arvo", sans-serif;
     font-size: 14px;
     display: inline-block;
+    margin-bottom: 20px;
     height: 36px;
     min-width: 88px;
     padding: 6px 16px;
