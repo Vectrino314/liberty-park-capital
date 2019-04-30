@@ -21,7 +21,7 @@ const UploadPage = () => (
     <div className="App">
 
     <Container maxWidth={56} px={5} py={2}>
-    <Headline>
+    <Headline mt={[2,3,4]}>
             Uploader Demo
     </Headline>
         <Featline>
