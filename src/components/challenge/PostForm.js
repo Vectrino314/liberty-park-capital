@@ -8,7 +8,7 @@ const statusMessage = status =>
   status
     ? {
         success: 'Success!',
-        error: 'Something went wrong 🚨',
+        error: 'Something went wrong 🚨'
       }[status]
     : 'Submit your entry'
 const statusColor = status =>
@@ -21,7 +21,7 @@ const InnerForm = ({
   handleBlur,
   handleSubmit,
   isSubmitting,
-  status,
+  status
 }) => (
   <form onSubmit={handleSubmit}>
     <Field
@@ -74,7 +74,7 @@ const PostForm = withFormik({
     url: yup
       .string()
       .url()
-      .required('required'),
+      .required('required')
   }),
   enableReinitialize: true,
   handleSubmit: (data, { setSubmitting, setStatus, resetForm, props }) => {
@@ -98,6 +98,6 @@ const PostForm = withFormik({
         setStatus('error')
       })
   },
-  displayName: 'PostForm',
+  displayName: 'PostForm'
 })(InnerForm)
 export default PostForm

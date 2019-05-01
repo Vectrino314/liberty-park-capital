@@ -50,7 +50,7 @@ class Auth extends Component {
       headline,
       preAuthed = false,
       preAuthData = {},
-      loginCallback = null,
+      loginCallback = null
     } = this.props
 
     const { authed, authData } = this.state
@@ -64,7 +64,7 @@ class Auth extends Component {
           style={{
             overflowWrap: 'break-word',
             wordWrap: 'break-word',
-            wordBreak: 'break-all',
+            wordBreak: 'break-all'
           }}
         >
           You’re <strong>{email}</strong> ({type}
@@ -109,8 +109,8 @@ Auth.defaultProps = {
     maxWidth: 20,
     p: 3,
     mb: 4,
-    bg: 'primary',
-  },
+    bg: 'primary'
+  }
 }
 
 export default Auth

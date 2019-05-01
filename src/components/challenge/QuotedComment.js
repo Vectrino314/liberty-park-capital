@@ -6,7 +6,7 @@ import {
   Text,
   Icon,
   IconButton,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import ReactMarkdown from 'react-markdown'
 import { QuotedCommentByline, commentStyle } from 'components/challenge/style'

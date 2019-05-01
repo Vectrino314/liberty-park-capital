@@ -9,7 +9,7 @@ import {
   Link as A,
   Text,
   hexa,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { Link } from 'gatsby'
 import PureImagination from 'components/PureImagination'
@@ -64,7 +64,7 @@ const Services = styled(Flex)`
 Services.defaultProps = {
   align: 'center',
   mb: 3,
-  wrap: true,
+  wrap: true
 }
 
 const Service = ({ href, icon, ...props }) => (
@@ -102,33 +102,91 @@ const Footer = ({ dark = false, children, ...props }) => (
     {...props}
   >
     {children}
-
-    <Flex wrap align="center" justify="space-around">
-      <Box fontSize={2}>
-        <Text>Office: 3103 BEE CAVES RD, Suite 100, Austin, TX 78746</Text>
-        <Text>Mail: 3103 BEE CAVES RD, Suite 100, Austin, TX 78746</Text>
-      </Box>
+    <PureImagination />
+    
+    <Columns px={3}>
       <Box>
+        <Heading.h2 fontSize={3} mb={3}>
+          ArdoRem
+        </Heading.h2>
+        <Pages>
+          <Link to="/" children="Home" />
+          <Link to="/#service/" children="Service" />
+          <Link to="/team/" children="Team" />
+          <Link to="/#testimonials/" children="Testimonials" />
+          {/* <Link to="/#gallery/" children="Gallery" /> */}
+        </Pages>
+      </Box>
+      {/* <Box>
+        <Heading.h2 fontSize={3} mb={3}>
+          For Clubs
+        </Heading.h2>
+        <Pages>
+          <Link to="/start/" children="Start a Club" />
+          <a href="https://apply.hackclub.com/" children="Apply" />
+          <Link to="/challenge/" children="Challenge" />
+          <Link to="/workshops/" children="Workshops" />
+          <a href="https://finder.hackclub.com/" children="Find Clubs" />
+        </Pages>
+      </Box> */}
+      {/* <Box>
+        <Heading.h2 fontSize={3} mb={3}>
+          Resources
+        </Heading.h2>
+        <Pages>
+          <Link to="/conduct/" children="Code of Conduct" />
+          <Link to="/night/" children="Hack Night" />
+          <a href="https://hackathons.hackclub.com/" children="Hackathons" />
+          <a href="https://shop.hackclub.com/" children="Shop" />
+          <Link to="/bank/" children="Bank" />
+        </Pages>
+      </Box> */}
+      <Box>
+        {/* <Heading.h2 fontSize={3} mb={3}>
+          Join the Club
+        </Heading.h2> */}
+        <Heading.h2 fontSize={3} mb={3}>
+          Contact Us
+        </Heading.h2>
+        {/* <Services>
+          <Service href="/community/" icon="slack-fill" target="_self" />
+          <Service href="https://twitter.com/hackclub" icon="twitter" />
+          <Service href="https://github.com/hackclub" icon="github" />
+          <Service
+            href="https://www.facebook.com/Hack-Club-741805665870458"
+            icon="facebook"
+          />
+          <Service href="https://medium.com/hackclub" icon="medium" />
+          <Service
+            href="https://www.youtube.com/channel/UCQzO0jpcRkP-9eWKMpJyB0w"
+            icon="youtube"
+          />
+          <Service
+            href="https://www.instagram.com/starthackclub"
+            icon="instagram"
+          />
+          <Service href="mailto:team@hackclub.com" icon="email" />
+        </Services> */}
         <Text my={2}>
-          <a href="tel:1-512-391-1551"> 1-512-391-1551</a>
+          <a href="tel:1-915-204-0674">1-915-204-0674</a>
           <br />
           <Text.span color="muted" children="(call toll-free)" />
           <br />
+          <br />
+          <a href="mailto:vectrino314@gmail.com?Subject=Hello%20again">
+            vectrino314@gmail.com
+          </a>
         </Text>
       </Box>
-    </Flex>
-
+    </Columns>
     <Container px={3} mt={[3, 4]}>
+      <Box fontSize={2}>
+        {/* <Text>Office: 12305 Diane Troyer Way, El Paso, TX 79936</Text>
+        <Text>Mail: 12305 Diane Troyer Way, El Paso, TX 79936</Text> */}
+      </Box>
       <BottomLine mt={3}>
         <Text fontSize={1} mt={2} color="muted">
-          © {new Date().getFullYear()} Website by{' '}
-          <a
-            href="https://ardorem.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Victor Solis
-          </a>
+          © {new Date().getFullYear()} Website by Victor Solis
         </Text>
       </BottomLine>
     </Container>

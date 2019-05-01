@@ -24,5 +24,5 @@ IconButton.propTypes = {
   glyph: PropTypes.string.isRequired,
   size: PropTypes.number,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+    .isRequired
 }

@@ -17,10 +17,10 @@ Sheet.defaultProps = {
   p: [3, 4],
   color: 'black',
   width: 1,
-  mb: 4,
+  mb: 4
 }
 Sheet.propTypes = {
-  flat: PropTypes.bool,
+  flat: PropTypes.bool
 }
 
 export default Sheet

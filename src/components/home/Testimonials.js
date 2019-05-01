@@ -8,7 +8,7 @@ import {
   Avatar,
   Icon,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import Carousel from 'nuka-carousel'
 import { Subhline, Lead } from 'components/Content'
@@ -24,7 +24,7 @@ const events = [
     budget: 30,
     attendees: 8,
     testimonial:
-      'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I can focus on making the event the best it can be.',
+      'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I can focus on making the event the best it can be.'
   },
   {
     name: 'LeatherMenders',
@@ -33,7 +33,7 @@ const events = [
     budget: 15,
     attendees: 115,
     testimonial:
-      'For me, Hack Club Bank unlocked organizing hackathons. Even after as a club leader, raising money seemed insurmountable. Bank directly enabled organizing events in my community with event bank accounts & a supportive community. I couldn’t recommend it more highly.',
+      'For me, Hack Club Bank unlocked organizing hackathons. Even after as a club leader, raising money seemed insurmountable. Bank directly enabled organizing events in my community with event bank accounts & a supportive community. I couldn’t recommend it more highly.'
   },
   {
     name: 'SLO Hacks',
@@ -42,7 +42,7 @@ const events = [
     budget: 50,
     attendees: 300,
     testimonial:
-      'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully-designed platform full of useful features, in addition to a responsive team that made sure our questions were addressed as quickly as possible.',
+      'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully-designed platform full of useful features, in addition to a responsive team that made sure our questions were addressed as quickly as possible.'
   },
   {
     name: 'MAHacks',
@@ -51,7 +51,7 @@ const events = [
     budget: 1.5,
     attendees: 70,
     testimonial:
-      'Hack Club Bank removed the barriers to starting fundraising for MAHacks. In mere days, vs months of nonprofit paperwork, Bank enabled my team to invoice sponsors professionally and manage our finances on a clear, up-to-date dashboard. I highly recommend using Bank & joining the Hack Club community.',
+      'Hack Club Bank removed the barriers to starting fundraising for MAHacks. In mere days, vs months of nonprofit paperwork, Bank enabled my team to invoice sponsors professionally and manage our finances on a clear, up-to-date dashboard. I highly recommend using Bank & joining the Hack Club community.'
   },
   {
     name: 'DV Hacks',
@@ -60,22 +60,22 @@ const events = [
     budget: 12,
     attendees: 150,
     testimonial:
-      'Hack Club Bank is an essential platform for any hackathon organizer! It made us look both professional and credible in front of our sponsors and it relieved us of legal/financial burdens. Hack Club Bank was there for us every step of the way and for a first-year hackathon, that support was priceless.',
-  },
+      'Hack Club Bank is an essential platform for any hackathon organizer! It made us look both professional and credible in front of our sponsors and it relieved us of legal/financial burdens. Hack Club Bank was there for us every step of the way and for a first-year hackathon, that support was priceless.'
+  }
 ]
 
 // Sectional CSS for Testimonials
 const Base = styled(Box.section).attrs({
   bg: 'darker',
   pt: [5, 6, 7],
-  pb: [4, 5, 6],
+  pb: [4, 5, 6]
 })``
 
 const Main = styled(Sheet).attrs({
   bg: '#252429',
   color: 'smoke',
   p: 0,
-  mt: 2,
+  mt: 2
 })`
   border-radius: 0;
   position: relative;
@@ -133,7 +133,7 @@ const Quote = styled(Text).attrs({ fontSize: [3, 4], color: 'muted' })`
 `
 const DetailStats = styled(Flex).attrs({
   flexDirection: ['row', null, 'column'],
-  justify: ['start', null, 'end'],
+  justify: ['start', null, 'end']
 })`
   p {
     color: ${theme.colors.muted};
@@ -150,7 +150,7 @@ const Event = ({
   budget,
   attendees,
   organizer,
-  testimonial,
+  testimonial
 }) => [
   <Photo key={img} src={img} />,
   <Box
@@ -170,7 +170,7 @@ const Event = ({
       <Quote>“{testimonial}”</Quote>
       <Flex align="center" mt={3}>
         <Avatar
-          src={require(`../../../static/hackers/${organizer
+          src={require(`../../../static/testimonials/${organizer
             .split(' ')[0]
             .toLowerCase()}.jpg`)}
           size={48}
@@ -181,7 +181,7 @@ const Event = ({
         </Text>
       </Flex>
     </Box>
-  </Details>,
+  </Details>
 ]
 
 export default () => (
@@ -210,10 +210,10 @@ export default () => (
           </SideControl>,
           <SideControl onClick={nextSlide} key="next">
             <Icon glyph="view-forward" color="smoke" size={48} pb={3} pr={3} />
-          </SideControl>,
+          </SideControl>
         ]}
       >
-        {/* KebabCase means turning the name and putting hyphens for spaces */}
+      {/* KebabCase means turning the name and putting hyphens for spaces */}
         {events.map(event => {
           const id = kebabCase(event.name)
           return <Event {...event} img={`/bank/events/${id}.jpg`} key={id} />

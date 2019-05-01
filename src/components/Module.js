@@ -26,7 +26,7 @@ Module.displayName = 'Module'
 Module.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  body: PropTypes.string,
+  body: PropTypes.string
 }
 
 export default Module

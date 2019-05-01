@@ -10,7 +10,7 @@ import {
   Icon,
   Link,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import PropTypes from 'prop-types'
 import { Modal, Overlay, CloseButton } from 'components/Modal'
@@ -98,7 +98,7 @@ const PostRow = ({
   clickCount,
   disabled,
   loading,
-  index,
+  index
 }) => (
   <Row
     bg={mine ? 'yellow.0' : 'white'}
@@ -181,7 +181,7 @@ PostRow.propTypes = {
   upvoted: PropTypes.bool,
   loading: PropTypes.bool,
   onUpvote: PropTypes.func.isRequired,
-  onComment: PropTypes.func.isRequired,
+  onComment: PropTypes.func.isRequired
 }
 const GridPostBase = styled(Box)`
   display: inline-block;
@@ -234,7 +234,7 @@ const GridPostRow = ({
   onComment,
   disabled,
   loading,
-  index,
+  index
 }) => (
   <GridPostBase
     bg={mine ? 'yellow.0' : 'white'}
@@ -297,14 +297,14 @@ GridPostRow.propTypes = {
   upvoted: PropTypes.bool,
   loading: PropTypes.bool,
   onUpvote: PropTypes.func.isRequired,
-  onComment: PropTypes.func.isRequired,
+  onComment: PropTypes.func.isRequired
 }
 class Post extends Component {
   state = {
     status: 'loading',
     email: null,
     commentsOpen: false,
-    comments: [],
+    comments: []
   }
   onOpen = e => {
     this.setState({ commentsOpen: true })
@@ -348,7 +348,7 @@ class Post extends Component {
             this.setState({
               comments,
               email: user && user.email,
-              status: 'success',
+              status: 'success'
             })
           })
       )

@@ -7,7 +7,7 @@ import {
   Flex,
   Icon,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { Headline, Lead } from 'components/Content'
 import { Fade } from 'react-reveal'
@@ -15,14 +15,14 @@ import { Fade } from 'react-reveal'
 const Base = styled(Box.section).attrs({
   bg: 'dark',
   color: 'gray.3',
-  py: [5, 6, 7],
+  py: [5, 6, 7]
 })``
 
 const Percentage = styled(Flex).attrs({
   justify: 'center',
   bg: 'black',
   color: 'success',
-  fontSize: [5, 84],
+  fontSize: [5, 84]
 })`
   width: 4rem;
   height: 4rem;
@@ -97,7 +97,7 @@ export default () => (
           'Dedicated point of contact',
           '12-hour response support',
           'Negotiated nonprofit rates with Stripe',
-          'Reimbursement process',
+          'Reimbursement process'
         ].map(item => (
           <List.Item key={item} children={item} />
         ))}

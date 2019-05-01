@@ -26,21 +26,21 @@ const Login = ({ userType = 'applicant', color, heading, bg }) => {
     {
       admin: 'green.5',
       applicant: 'white',
-      owner: 'white',
+      owner: 'white'
     }[userType]
   const resultBg =
     bg ||
     {
       admin: 'black',
       applicant: 'primary',
-      owner: 'orange.5',
+      owner: 'orange.5'
     }[userType]
   const resultHeading =
     heading ||
     {
       admin: 'Admin login',
       applicant: 'Start your application',
-      owner: '⚙️ Operations login 🔧',
+      owner: '⚙️ Operations login 🔧'
     }[userType]
   return (
     <Base color={resultColor} bg={resultBg}>

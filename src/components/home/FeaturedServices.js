@@ -7,7 +7,7 @@ import {
   Flex,
   Icon,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { Headline, Lead, Featline, ColoredHeadline } from 'components/Content'
 import DefineCard from './DefineCard'
@@ -18,11 +18,11 @@ import {
   IoMdBusiness,
   IoIosRestaurant,
   IoIosPhonePortrait,
-  IoMdArrowRoundForward,
+  IoMdArrowRoundForward
 } from 'react-icons/io'
-import { DiWordpress } from 'react-icons/di'
+import {DiWordpress} from 'react-icons/di'
 import Button from '@hackclub/design-system/dist/Button'
-import GalleryModal from 'components/home/GalleryModal'
+import GalleryModal from  'components/home/GalleryModal'
 
 const Base = styled(Box.section).attrs({ bg: 'dark', color: 'gray.3' })``
 
@@ -42,7 +42,7 @@ Modules.defaultProps = {
   mt: [4, null, 3],
   mb: 3,
   mx: 'auto',
-  maxWidth: 72,
+  maxWidth: 72
 }
 
 const ShadowBox = styled(Box)`
@@ -104,7 +104,7 @@ const ModuleDetails = styled(Box).attrs({
   mt: 2,
   ml: 3,
   py: 3,
-  px: 2,
+  px: 2
 })`
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0625);
   border-radius: ${theme.radii[2]};
@@ -277,9 +277,8 @@ export default () => (
         <Headline>We're eager to hear about your needs.</Headline>
       </Box>
 
-      <Box
-        px={3}
-        // py={1}
+      <Box px={3} 
+      // py={1}
       >
         <ReactModule
           icon="web"
@@ -298,10 +297,11 @@ export default () => (
             cost="Tailored for all connection speeds with benchmarks to prove it."
           />
           <Box pt={1} align="center" style={{ width: '100%' }}>
-            {/* <Button>Demo Sites</Button> */}
-            <GalleryModal />
-          </Box>
+          {/* <Button>Demo Sites</Button> */}
+          <GalleryModal />
+        </Box>
         </ModuleDetails>
+        
       </Box>
 
       <Box>

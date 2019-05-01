@@ -7,7 +7,7 @@ import {
   Button,
   theme,
   mediaQueries,
-  hexa,
+  hexa
 } from '@hackclub/design-system'
 import Link from 'gatsby-link'
 
