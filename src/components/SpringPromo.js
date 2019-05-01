@@ -6,7 +6,7 @@ import {
   Text,
   Sheet,
   LargeButton,
-  theme
+  theme,
 } from '@hackclub/design-system'
 import { Headline, Lead } from 'components/Content'
 import { Link } from 'gatsby'
@@ -16,7 +16,7 @@ const Base = styled(Sheet).attrs({
   my: [5, 6],
   p: 0,
   color: 'white',
-  align: 'center'
+  align: 'center',
 })`
   display: grid;
   grid-gap: ${theme.space[3]}px;
@@ -40,13 +40,13 @@ const White = styled(Flex).attrs({
   ...section,
   flexDirection: 'column',
   justify: 'center',
-  bg: 'white'
+  bg: 'white',
 })`
   height: 100%;
 `
 
 const Timeline = styled(Flex).attrs({
-  flexDirection: 'column'
+  flexDirection: 'column',
 })`
   line-height: 1.125;
   position: relative;
@@ -67,14 +67,14 @@ const Timeline = styled(Flex).attrs({
 `
 const TimelineStep = styled(Flex).attrs({
   align: 'center',
-  pt: props => (props.first ? 0 : [2, 3])
+  pt: props => (props.first ? 0 : [2, 3]),
 })`
   line-height: 1.125;
 `
 const Circle = styled(Box).attrs({
   p: 1,
   bg: 'rgb(26, 211, 191)',
-  color: 'white'
+  color: 'white',
 })`
   border-radius: ${theme.pill};
   display: inline-block;

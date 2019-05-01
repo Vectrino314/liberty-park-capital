@@ -6,7 +6,7 @@ import {
   Text,
   IconButton,
   Field,
-  theme
+  theme,
 } from '@hackclub/design-system'
 
 import IconTextButton from 'components/IconButton'
@@ -28,7 +28,7 @@ export default ({
   handleNewNameChange,
   newDesc,
   handleNewDescChange,
-  createDraft
+  createDraft,
 }) => (
   <Sheet style={transitionStyle}>
     <Flex align="center" style={{ textAlign: 'left' }} mb={4}>

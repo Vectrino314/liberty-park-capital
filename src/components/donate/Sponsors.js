@@ -34,7 +34,7 @@ const Sponsors = props => (
       'Bugsnag',
       'Google',
       'Dialpad',
-      'Figma'
+      'Figma',
     ].map(name => (
       <Sponsor name={name} key={name} />
     ))}

@@ -20,7 +20,7 @@ class Posts extends Component {
     upvotes: [],
     status: 'loading',
     requestIds: [],
-    prevUserId: null
+    prevUserId: null,
   }
 
   sortFunctions = {
@@ -33,7 +33,7 @@ class Posts extends Component {
       return posts
         .sort((a, b) => a.id - b.id)
         .sort((a, b) => randGenerator.get() - 0.5)
-    }
+    },
   }
 
   static getDerivedStateFromProps = (nextProps, prevState) => {
@@ -92,7 +92,7 @@ class Posts extends Component {
     const requestId = Math.random().toString()
 
     this.setState(state => ({
-      requestIds: state.requestIds.concat(requestId)
+      requestIds: state.requestIds.concat(requestId),
     }))
 
     api
@@ -122,7 +122,7 @@ class Posts extends Component {
         if (index !== -1) {
           const newRequestIds = this.state.requestIds.splice(1, index)
           this.setState({
-            requestIds: newRequestIds
+            requestIds: newRequestIds,
           })
         }
       })
@@ -188,7 +188,7 @@ class Posts extends Component {
           const newUpvote = {
             // Generate a random ID for the upvote so we can refer to it in future presses -- it will be overwritten when the page updates with an ID from the backend
             id: Math.round(Math.random() * -10000),
-            user: { id: authUser }
+            user: { id: authUser },
           }
           const modifiedUpvotes = [...post.upvotes, newUpvote]
           return { ...post, loading: true, upvotes: modifiedUpvotes }

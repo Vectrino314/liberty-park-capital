@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { Text, Box, Container, Flex, Icon, cx, theme } from '@hackclub/design-system'
+import {
+  Text,
+  Box,
+  Container,
+  Flex,
+  Icon,
+  cx,
+  theme,
+  OutlineButton,
+} from '@hackclub/design-system'
 // import { Text } from 'components/Content';
 import Flag from 'components/Flag'
 import { Link } from 'gatsby'
 import ScrollLock from 'react-scrolllock'
-import GalleryModal from './home/GalleryModal';
+import GalleryModal from './home/GalleryModal'
 
 const rgbaBgColor = (props, opacity) =>
   `rgba(
@@ -44,6 +53,9 @@ const Root = styled(Box.withComponent('header'))`
       ${theme.mediaQueries.reduceTransparency} {
         -webkit-backdrop-filter: auto !important;
       }
+      ${theme.mediaQueries.lg} {
+        min-height: 10vh;
+      }
     `} @media print {
     display: none;
   }
@@ -53,13 +65,18 @@ const Content = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // min-width: 10vw;
   position: relative;
-  transition: all 1s ease-in-out;
+  
+  width: 100vw;
+  // transition: all 1s ease-in-out;
+
+  ${theme.mediaQueries.lg} {
+    margin-top: 50px;
+  }
 
   ${theme.mediaQueries.md} {
-   
-    padding: 0 0 0 ${theme.space[4]}px;
+    // padding: 0 0 0 ${theme.space[4]}px;
+    max-height: 15vw;
   }
 `
 
@@ -70,15 +87,45 @@ const hoverColor = name =>
     muted: 'slate',
     slate: 'black',
     black: 'slate',
-    primary: 'error'
+    primary: 'error',
   }[name] || 'black')
+
+const MobileFlag = styled(Flag)`
+  display: block;
+  ${theme.mediaQueries.lg} {
+    display: none;
+  }
+  ${theme}
+`
+
+const ResponsiveFlag = styled(Flag)`
+  display: none;
+  ${theme.mediaQueries.lg} {
+    display: block;
+  }
+  ${props =>
+    props.scrolled
+      ? null
+      : css`
+          transform: scale(1.5);
+        `}
+`
 
 const NavBar = styled(Box.withComponent('nav'))`
   display: none;
+  width: 100vw;
+  ${theme.mediaQueries.lg} {
+    width: calc(100vw - 10%);
+  }
+  ${theme.mediaQueries.xl} {
+    width: calc(100vw - 50%);
+  }
   a {
     color: ${props => cx(props.color)};
-    margin-left: ${theme.space[2]}px;
-    padding: ${theme.space[2]}px;
+    // margin: ${theme.space[2]}px;
+    // padding: ${theme.space[2]}px;
+    padding: 0;
+    margin: auto;
     text-decoration: none;
   }
   ${props =>
@@ -110,9 +157,10 @@ const NavBar = styled(Box.withComponent('nav'))`
         css`
           @media (min-width: 56em) {
             display: flex;
-            //padding: 100px, 100px 100px;
-
+            // justify-content: spaced-between;
+            // align-items: flex-end;
             position: absolute;
+            // top: -130%;
             left: 50%;
             transform: translateX(-50%);
           }
@@ -126,12 +174,22 @@ const NavBar = styled(Box.withComponent('nav'))`
         `};
 `
 
+const ClientButton = styled(OutlineButton)`
+  width: 15vw;
+  margin: 10px;
+  ${theme.mediaQueries.lg} {
+    margin: 10px;
+  }
+`
+
 const Navigation = props => (
-   <NavBar role="navigation" { ...props} >
-    <Link to="/#services" children="Services" />
-    <Link to="/#testimonials" children="Testimonials" />
+  <NavBar role="navigation" {...props}>
+    <Link to="/" children="Team" />
+    <Link to="/" children="News & Updates" />
+    <ResponsiveFlag scrolled={props.scrolled} />
     {/* <Link to="/#gallery" children="Gallery" /> */}
-    <Link to="/#contact" children="Contact" />
+    <Link to="/" children="Firm Overview" />
+    <Link to="/" children="Contact" />
 
     {/* <Link to="/workshops/" children="Workshops" /> */}
     {/* <a
@@ -143,37 +201,37 @@ const Navigation = props => (
     {/* <Link to="/bank/" children="Bank" />
     <Link to="/donate/" children="Donate" /> */}
   </NavBar>
-    // {/* <a
-    //   href="https://hackathons.hackclub.com/"
-    //   children="Hackathons"
-    //   target="_blank"
-    //   rel="noopener noreferrer"
-    // />
-    // <Link to="/bank/" children="Bank" />
-    // <Link to="/donate/" children="Donate" /> */}
+  // {/* <a
+  //   href="https://hackathons.hackclub.com/"
+  //   children="Hackathons"
+  //   target="_blank"
+  //   rel="noopener noreferrer"
+  // />
+  // <Link to="/bank/" children="Bank" />
+  // <Link to="/donate/" children="Donate" /> */}
 )
 
 const MenuHeader = styled(Text).attrs(({ toggled }) => ({
-  toggle: toggled
+  toggle: toggled,
 }))`
+  font-family: 'Arvo';
+  display: ${props => (props.toggled ? 'none' : 'block')}};
+  margin-left: ${props => (props.scrolled ? '-12px' : '0px')};
 
-font-family: 'Arvo';
-display: ${props => props.toggled ? 'none' : 'block'}};
+  ${theme.mediaQueries.md} {
+    margin-left: 0.02em;
+    font-size: 1.3em;
+  }
 
-${theme.mediaQueries.md} {
-  margin-left: .02em;
-  font-size: 1.3em;
-}
-
-${theme.mediaQueries.lg} {
-  display: none;
-}
+  ${theme.mediaQueries.lg} {
+    display: none;
+  }
 `
 
 const ToggleContainer = styled(Flex)`
   align-items: center;
   justify-content: center;
-  min-width: 100px;
+  min-width: calc(10px + 15%);
   min-height: 44px;
   cursor: pointer;
   user-select: none;
@@ -194,12 +252,12 @@ const Toggle = styled(Icon).attrs({})`
 class Header extends Component {
   state = {
     scrolled: false,
-    toggled: false
+    toggled: false,
   }
 
   static defaultProps = {
     dark: false,
-    color: 'white'
+    color: 'white',
   }
 
   static propTypes = {
@@ -207,7 +265,7 @@ class Header extends Component {
     bgColor: PropTypes.arrayOf(PropTypes.number),
     dark: PropTypes.bool,
     transparent: PropTypes.bool,
-    fixed: PropTypes.bool
+    fixed: PropTypes.bool,
   }
 
   componentDidMount() {
@@ -239,14 +297,14 @@ class Header extends Component {
 
     if (newState !== oldState) {
       this.setState({
-        scrolled: newState
+        scrolled: newState,
       })
     }
   }
 
   handleToggleMenu = () => {
     this.setState(state => ({
-      toggled: !state.toggled
+      toggled: !state.toggled,
     }))
   }
 
@@ -275,30 +333,47 @@ class Header extends Component {
       >
         <Content>
           {/* <Container> */}
-          <Flag scrolled={scrolled || fixed} />
-          <MenuHeader
-        // color={}
-        fontSize={1}
-        m={0}
-        style={{ letterSpacing: '0em' }}
-        bold
-        
-        ml={-3}
-        onClick={this.handleToggleMenu}
-        toggled={toggled}
+          <MobileFlag scrolled={scrolled || fixed} />
+          {/* <MenuHeader
+            // color={}
+            fontSize={1}
+            m={0}
+            style={{ letterSpacing: '0em' }}
+            bold
+            ml={-2}
+            onClick={this.handleToggleMenu}
+            toggled={toggled}
+            scrolled={scrolled || fixed}
 
-        // children={}
-      > menu </MenuHeader>
-      {/* <Link to="/#services" children="Services" onClick={this.handleToggleMenu} /> */}
+            // children={}
+          >
+            {' '}
+            menu{' '}
+          </MenuHeader> */}
+          {/* <Link to="/#services" children="Services" onClick={this.handleToggleMenu} /> */}
           {/* </Container> */}
-          <Navigation color={baseColor} dark={dark} toggled={toggled}>
-     
-          </Navigation>
+          <Navigation
+            scrolled={scrolled || fixed}
+            color={baseColor}
+            dark={dark}
+            toggled={toggled}
+          />
           <ToggleContainer color={toggleColor}>
-            <Toggle glyph={toggled ? 'view-close' : null} toggled={toggled} onClick={toggled ? this.handleToggleMenu : null} />
+            <Toggle
+              glyph={toggled ? 'view-close' : 'menu'}
+              toggled={toggled}
+              onClick={toggled ? this.handleToggleMenu : this.handleToggleMenu}
+            />
           </ToggleContainer>
         </Content>
-        <Navigation isMobile toggled={toggled} color={baseColor} dark={dark} onClick={toggled ? this.handleToggleMenu : null} />
+        <Navigation
+          isMobile
+          logo={false}
+          toggled={toggled}
+          color={baseColor}
+          dark={dark}
+          onClick={toggled ? this.handleToggleMenu : null}
+        />
         {toggled && <ScrollLock />}
       </Root>
     )

@@ -4,7 +4,7 @@ import { Heading, Text, Container, theme } from '@hackclub/design-system'
 export const Title = styled(Heading.h1).attrs({
   fontSize: [7, 8, 9],
   mt: 2,
-  mb: [3, 4]
+  mb: [3, 4],
 })`
   line-height: 1;
   letter-spacing: -0.015em;
@@ -13,7 +13,7 @@ export const Title = styled(Heading.h1).attrs({
 
 export const Headline = styled(Heading.h2).attrs({
   fontSize: [6, 7],
-  mb: [3, 4]
+  mb: [3, 4],
 })`
   display: block;
   line-height: 1;
@@ -27,7 +27,7 @@ export const Headline = styled(Heading.h2).attrs({
 export const Subhline = styled(Heading.h3).attrs({
   fontSize: [5, 6],
   mb: 3,
-  bold: true
+  bold: true,
 })`
   line-height: 1;
   letter-spacing: -0.006em;
@@ -36,7 +36,7 @@ export const Subhline = styled(Heading.h3).attrs({
 export const Featline = styled(Heading.h3).attrs({
   fontSize: 5,
   mb: 3,
-  bold: true
+  bold: true,
 })`
   line-height: 1;
   letter-spacing: -0.006em;
@@ -60,7 +60,7 @@ export const ColoredHeadline = styled(Headline).attrs({ pb: 2, mb: 3 })`
 `
 
 export const Lead = styled(Container.withComponent(Text)).attrs({
-  fontSize: 3
+  fontSize: 3,
 })`
   letter-spacing: 0.006em;
 `

@@ -3,7 +3,7 @@ import { Sheet, BackgroundImage, theme } from '@hackclub/design-system'
 
 const Photo = styled(Sheet.withComponent(BackgroundImage)).attrs({
   role: 'img',
-  p: 0
+  p: 0,
 })`
   min-height: 18rem;
   position: relative;

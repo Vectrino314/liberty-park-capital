@@ -18,7 +18,7 @@ const Absolute = styled(Flex)`
 const Search = styled(Input).attrs({
   bg: 'white',
   py: 2,
-  pr: 3
+  pr: 3,
 })`
   padding-left: 48px; // 16px icon + 32px padding
   line-height: 48px;

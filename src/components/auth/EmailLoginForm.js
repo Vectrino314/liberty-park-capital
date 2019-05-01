@@ -34,7 +34,7 @@ const InnerForm = ({
   bg,
   status,
   inputProps = {},
-  textProps = {}
+  textProps = {},
 }) => (
   <form onSubmit={handleSubmit}>
     <Label className="email" id="email" mb={0} {...textProps}>
@@ -84,7 +84,7 @@ const EmailLoginForm = withFormik({
   enableReinitialize: true,
   validateOnChange: false,
   validationSchema: yup.object().shape({
-    email: yup.string().email('That doesn’t look like a valid email.')
+    email: yup.string().email('That doesn’t look like a valid email.'),
   }),
   handleSubmit: (data, { props, setSubmitting }) => {
     if (!data.email) {
@@ -104,7 +104,7 @@ const EmailLoginForm = withFormik({
         setSubmitting(false)
       })
   },
-  displayName: 'EmailLoginForm'
+  displayName: 'EmailLoginForm',
 })(InnerForm)
 
 export default EmailLoginForm

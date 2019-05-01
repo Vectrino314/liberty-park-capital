@@ -11,7 +11,7 @@ const Announcement = styled(Sheet).attrs({
   //mt: [null, -3, -4, -5],
   mb: [3, 4, 5],
   bg: 'white',
-  color: 'gray.9'
+  color: 'gray.9',
 })`
   ${theme.mediaQueries.sm} {
     display: flex;
@@ -37,7 +37,7 @@ const Announcement = styled(Sheet).attrs({
 const DefinedItem = styled(Heading.h1).attrs({
   color: 'black',
   fontSize: [4, 8, 9],
-  pb: 2
+  pb: 2,
 })`
   align-self: flex-start;
   letter-spacing: -0.015em;
@@ -52,7 +52,7 @@ const Pronounciation = styled(Subhline).attrs({
   color: 'grey',
   fontSize: [1, 2, 3],
   pb: 2,
-  ml: [2, 3, 6]
+  ml: [2, 3, 6],
 })`
   align-self: flex-start;
   letter-spacing: -0.015em;
@@ -66,7 +66,7 @@ const Pronounciation = styled(Subhline).attrs({
 const Type = styled(Lead).attrs({
   color: 'grey',
   fontSize: [1, 2, 2],
-  ml: [1, 2, 4]
+  ml: [1, 2, 4],
 })`
   align-self: flex-start;
   letter-spacing: -0.015em;
@@ -77,7 +77,7 @@ const TypeDetails = styled(Lead).attrs({
   color: 'black',
   // fontSize: [1,2,3],
   pb: [null, null, 2, 2],
-  ml: [2, 3, 6]
+  ml: [2, 3, 6],
 })`
   align-self: flex-start;
   letter-spacing: -0.015em;
@@ -90,7 +90,7 @@ Announcement.Link = styled(A.withComponent(Link)).attrs({
   bold: true,
   fontSize: 2,
   ml: 'auto',
-  chevronRight: true
+  chevronRight: true,
 })``
 
 export default () => (

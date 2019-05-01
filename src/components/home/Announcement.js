@@ -10,7 +10,7 @@ const Announcement = styled(Sheet).attrs({
   mt: [null, -3, -4, -5],
   mb: [3, 4, 5],
   bg: 'yellow.3',
-  color: 'gray.9'
+  color: 'gray.9',
 })`
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@ Announcement.Link = styled(A.withComponent(Link)).attrs({
   bold: true,
   fontSize: 2,
   ml: 'auto',
-  chevronRight: true
+  chevronRight: true,
 })``
 
 export default () => (

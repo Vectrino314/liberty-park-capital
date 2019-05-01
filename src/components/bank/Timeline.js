@@ -8,21 +8,21 @@ import {
   Avatar,
   Text,
   Badge,
-  theme
+  theme,
 } from '@hackclub/design-system'
 import { Slide } from 'react-reveal'
 import { Subhline, Lead } from 'components/Content'
 
 const Timeline = styled(Flex).attrs({
   flexDirection: ['column', null, 'row'],
-  justify: 'center'
+  justify: 'center',
 })`
   position: relative;
 `
 const TimelineStep = styled(Flex).attrs({
   px: [null, null, 3, 4],
   flexDirection: ['row', null, 'column'],
-  align: 'center'
+  align: 'center',
 })`
   border-radius: ${theme.pill};
   line-height: 1.125;

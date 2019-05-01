@@ -15,7 +15,7 @@ const groupOrder = [
   'arduino',
   'experimental',
   'misc',
-  'retired'
+  'retired',
 ]
 const keys = ['node.frontmatter.name', 'node.frontmatter.description']
 

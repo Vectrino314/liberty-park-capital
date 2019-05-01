@@ -12,7 +12,7 @@ import {
   Heading,
   theme,
   BackgroundImage,
-  Icon
+  Icon,
 } from '@hackclub/design-system'
 import Fade from 'react-reveal/Fade'
 import Sheet from 'components/Sheet'
@@ -24,21 +24,21 @@ const events = [
     location: 'Sunnyvale, CA',
     organizer: 'Jamsheed Mistri',
     testimonial:
-      'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I don’t need to dedicate as much time to the legal and financial aspects of our event, leaving plenty of time to focus on making it the best it can be.'
+      'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I don’t need to dedicate as much time to the legal and financial aspects of our event, leaving plenty of time to focus on making it the best it can be.',
   },
   {
     name: 'Hack Pennsylvania',
     location: 'State College, PA',
     organizer: 'Lachlan Campbell',
-    testimonial: 'Bank is so fucking amazing. Like wow. Omg. Spectacular.'
+    testimonial: 'Bank is so fucking amazing. Like wow. Omg. Spectacular.',
   },
   {
     name: 'SLO Hacks',
     location: 'San Luis Obispo, CA',
     organizer: 'Selynna Sun',
     testimonial:
-      'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully designed platform packed full of useful features, in addition to a responsive team that made sure our questions and concerns were addressed as quickly as possible.'
-  }
+      'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully designed platform packed full of useful features, in addition to a responsive team that made sure our questions and concerns were addressed as quickly as possible.',
+  },
 ]
 
 const Slide = styled(Box).attrs({ bg: 'snow', width: '100vw' })`
@@ -114,7 +114,7 @@ const LocationPill = styled(Flex).attrs({
   py: 1,
   px: 3,
   mb: [3, 4],
-  color: 'slate'
+  color: 'slate',
 })`
   border-radius: ${theme.pill};
   background: rgba(255, 255, 255, 0.875);

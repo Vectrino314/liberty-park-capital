@@ -32,13 +32,13 @@ class Comments extends Component {
   state = { data: [], parent: null }
 
   static getDerivedStateFromProps = (nextProps, prevState) => ({
-    data: nextProps.data
+    data: nextProps.data,
   })
 
   onSubmit = data => {
     const newData = this.state.data.push(data)
     this.setState({
-      data: newData
+      data: newData,
     })
     this.forceUpdate()
   }
@@ -59,7 +59,7 @@ class Comments extends Component {
       .delete(`v1/post_comments/${id}`)
       .then(() => {
         this.setState(state => ({
-          data: remove(state.data, comment => comment.id !== id)
+          data: remove(state.data, comment => comment.id !== id),
         }))
       })
       .catch(e => {})
@@ -83,13 +83,13 @@ class Comments extends Component {
             cardProps={{
               p: 3,
               my: 3,
-              bg: 'info'
+              bg: 'info',
             }}
             textProps={{
               justify: 'center',
               py: [2, 3],
               fontSize: [1, 2],
-              color: 'muted'
+              color: 'muted',
             }}
           />
           {status === 'loading' ? (

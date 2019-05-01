@@ -96,5 +96,5 @@ export default {
   Line,
   Pentagon,
   Square,
-  Triangle
+  Triangle,
 }

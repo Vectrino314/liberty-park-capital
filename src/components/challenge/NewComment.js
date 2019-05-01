@@ -43,7 +43,7 @@ const InnerForm = ({
 )
 const CommentForm = withFormik({
   validationSchema: yup.object().shape({
-    body: yup.string()
+    body: yup.string(),
   }),
   enableReinitialize: true,
   handleSubmit: (data, { props, setStatus, setSubmitting, setValues }) => {
@@ -56,7 +56,7 @@ const CommentForm = withFormik({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         authToken,
-        body
+        body,
       })
       .then(res => {
         setSubmitting(false)
@@ -72,6 +72,6 @@ const CommentForm = withFormik({
         console.error(e)
       })
   },
-  displayName: 'CommentForm'
+  displayName: 'CommentForm',
 })(InnerForm)
 export default CommentForm

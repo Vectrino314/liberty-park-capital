@@ -10,7 +10,7 @@ import IconButton from 'components/IconButton'
 const ErrorContainer = styled(Flex).attrs({
   bg: 'snow',
   align: 'center',
-  justify: 'center'
+  justify: 'center',
 })`
   min-height: 100vh;
   div {

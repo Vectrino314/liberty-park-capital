@@ -10,7 +10,7 @@ const Base = styled(Box.section).attrs({ bg: 'darker', px: 3, pb: [4, 5, 6] })``
 const Main = styled(Sheet).attrs({
   bg: '#252429',
   color: 'smoke',
-  p: [3, 4, 5]
+  p: [3, 4, 5],
 })`
   border-radius: ${theme.radii[2]};
   position: relative;

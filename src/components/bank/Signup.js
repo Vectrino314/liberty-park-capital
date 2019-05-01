@@ -75,6 +75,6 @@ const InnerForm = ({ values, errors, touched, handleChange, handleBlur }) => (
 )
 const Signup = withFormik({
   enableReinitialize: true,
-  displayName: 'Signup'
+  displayName: 'Signup',
 })(InnerForm)
 export default Signup

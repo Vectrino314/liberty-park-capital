@@ -20,7 +20,7 @@ export default props => {
       const transactions_volume = Math.floor(stats.transactions_volume / 100)
         .toLocaleString('en-US', {
           style: 'currency',
-          currency: 'USD'
+          currency: 'USD',
         })
         .replace('.00', '')
       setVolume(transactions_volume)

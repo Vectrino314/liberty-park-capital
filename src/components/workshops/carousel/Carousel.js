@@ -12,7 +12,7 @@ import {
   LargeButton,
   Loading,
   Icon,
-  theme
+  theme,
 } from '@hackclub/design-system'
 
 import CarouselProject from './CarouselProject'
@@ -37,7 +37,7 @@ const CarouselOuter = styled(Flex).attrs({
   pt: [2, 3, 4],
   pb: [3, null, 4],
   flexDirection: 'column',
-  align: 'center'
+  align: 'center',
 })``
 
 const StaticWrapper = styled(Flex).attrs({ mb: [3, 3, 4], justify: 'center' })`
@@ -51,7 +51,7 @@ const SliderWrapper = styled(Box).attrs({ mb: [0, 3, 4] })`
 const ShowAllProjects = styled(Flex).attrs({
   align: 'center',
   fontSize: [2, 3],
-  color: 'muted'
+  color: 'muted',
 })`
   cursor: pointer;
   svg {
@@ -68,7 +68,7 @@ const ShowAllGrid = styled(Flex).attrs({
   flexDirection: 'row',
   wrap: true,
   px: 3,
-  mb: 1
+  mb: 1,
 })``
 
 const LoadingWrapper = styled(Box)`
@@ -129,7 +129,7 @@ const sliderSettings = {
   centerMode: true,
   pauseOnHover: true,
   variableWidth: true,
-  focusOnSelect: true
+  focusOnSelect: true,
 }
 
 const SliderList = projects => (
@@ -184,7 +184,7 @@ class Carousel extends Component {
     submitting: false,
     submissionData: {
       liveUrl: '',
-      codeUrl: ''
+      codeUrl: '',
     },
     authed: false,
     authData: {},
@@ -192,7 +192,7 @@ class Carousel extends Component {
     liveFrameImage: null,
     showAll: false,
     original: this.emptyProject,
-    projects: []
+    projects: [],
   }
   emptyProject = {
     user: { username: '' },
@@ -204,8 +204,8 @@ class Carousel extends Component {
       created_at: '',
       updated_at: '',
       type: '',
-      file_path: ''
-    }
+      file_path: '',
+    },
   }
 
   componentDidMount() {
@@ -223,7 +223,7 @@ class Carousel extends Component {
       this.setState({
         loading: false,
         original,
-        projects
+        projects,
       })
     })
 
@@ -276,7 +276,7 @@ class Carousel extends Component {
       authData,
       liveFrameStatus,
       // liveFrameImage,
-      showAll
+      showAll,
     } = this.state
 
     const {
@@ -284,14 +284,14 @@ class Carousel extends Component {
       onClickSubmitButton,
       onClickShowAll,
       onSignOut,
-      emptyProject
+      emptyProject,
     } = this
 
     const submissionProject = {
       user: authData,
       live_url: submissionData.liveUrl,
       code_url: submissionData.codeUrl,
-      screenshot: {}
+      screenshot: {},
     }
 
     const projectCount = projects.length - (original ? 0 : 1)

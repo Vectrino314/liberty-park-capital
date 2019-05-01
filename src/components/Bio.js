@@ -7,7 +7,7 @@ import {
   Text,
   Avatar,
   Badge,
-  theme
+  theme,
 } from '@hackclub/design-system'
 import Sheet from 'components/Sheet'
 

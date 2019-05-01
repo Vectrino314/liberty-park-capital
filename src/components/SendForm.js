@@ -13,7 +13,7 @@ export const SendForm = styled(Flex.withComponent('form'))`
 `
 SendForm.defaultProps = {
   align: 'flex-end',
-  width: 1
+  width: 1,
 }
 
 export const SendButton = styled(IconButton)`
@@ -28,7 +28,7 @@ SendButton.propTypes = {
   type: PropTypes.string,
   color: PropTypes.string,
   glyph: PropTypes.string,
-  size: PropTypes.number
+  size: PropTypes.number,
 }
 SendButton.defaultProps = {
   type: 'submit',
@@ -36,5 +36,5 @@ SendButton.defaultProps = {
   glyph: 'send',
   size: 28,
   py: 1,
-  ml: 3
+  ml: 3,
 }

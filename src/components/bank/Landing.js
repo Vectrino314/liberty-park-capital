@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Link as A,
-  theme
+  theme,
 } from '@hackclub/design-system'
 import { Lead } from 'components/Content'
 import Possibility from 'components/bank/Possibility'
@@ -15,7 +15,7 @@ const Slide = styled(Flex).attrs({
   flexDirection: 'column',
   justify: 'end',
   bg: 'snow',
-  width: '100vw'
+  width: '100vw',
 })`
   background: url('/bank/bg.jpg');
   box-shadow: inset 0 0 4rem 4rem rgba(0, 0, 0, 0.5);
@@ -59,7 +59,7 @@ const LocationPill = styled(Flex).attrs({
   py: 1,
   px: 3,
   mb: [3, 4],
-  color: 'dark'
+  color: 'dark',
 })`
   border-radius: ${theme.pill};
   background: rgba(255, 255, 255, 0.875);
