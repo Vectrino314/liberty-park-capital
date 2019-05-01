@@ -10,7 +10,7 @@ import {
   Text,
   theme,
 } from '@hackclub/design-system'
-import Carousel from 'nuka-carousel'
+import Carousel from 'nuka-carousel' 
 import { Subhline, Lead } from 'components/Content'
 import Sheet from 'components/Sheet'
 import Stat from 'components/Stat'
