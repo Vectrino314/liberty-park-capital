@@ -7,7 +7,7 @@ import {
   Flex,
   Icon,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { Headline, Lead } from 'components/Content'
 
@@ -29,7 +29,7 @@ Modules.defaultProps = {
   mt: [4, null, 3],
   mb: 3,
   mx: 'auto',
-  maxWidth: 72,
+  maxWidth: 72
 }
 
 const Module = ({ icon, name, body, ...props }) => (
@@ -59,7 +59,7 @@ const ModuleDetails = styled(Box).attrs({
   mt: 2,
   ml: 3,
   py: 3,
-  px: 2,
+  px: 2
 })`
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0625);
   border-radius: ${theme.radii[2]};

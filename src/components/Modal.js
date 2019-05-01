@@ -52,7 +52,7 @@ export const Overlay = styled(Box)`
 
 const ButtonReset = styled(Box.withComponent('button')).attrs({
   role: 'button',
-  p: 3,
+  p: 3
 })`
   appearance: none;
   background: transparent;

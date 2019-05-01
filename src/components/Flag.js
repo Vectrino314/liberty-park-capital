@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
 const Flag = styled(Link)`
-  background: url(/logo.png) no-repeat;
+  background: url(/Ardorem_Sun.svg) no-repeat;
   background-size: contain;
   background-position: center;
   flex-shrink: 0;
@@ -17,14 +17,14 @@ const Flag = styled(Link)`
   ${theme.mediaQueries.md} {
     // transition: all 1s ease-in-out;
     transform: scale(1);
-    width: 200px;
+    width: 100px;
     height: 140px;
   }
   ${props =>
     props.scrolled &&
     css`
       // background: url(/buildingsLogo.svg) no-repeat;
-      transform: scale(0.75);
+      transform: scale(.75);
       // transition: all 1s ease-in-out;
       // transition-delay: 1s;
       // margin: 10px;
@@ -37,7 +37,7 @@ const Flag = styled(Link)`
 `
 Flag.defaultProps = {
   to: '/',
-  'aria-label': 'Homepage',
+  'aria-label': 'Homepage'
 }
 
 export default Flag

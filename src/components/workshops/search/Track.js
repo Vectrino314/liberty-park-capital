@@ -6,7 +6,7 @@ import {
   Container,
   Heading,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { Link } from 'gatsby'
 import { capitalize, map } from 'lodash'
@@ -85,7 +85,7 @@ const Item = styled(Card).attrs({ bg: 'primary', p: 3 })`
 const WorkshopItem = ({
   data: {
     fields: { slug, bg },
-    frontmatter: { name, description },
+    frontmatter: { name, description }
   },
   ...props
 }) => (
@@ -109,7 +109,7 @@ const descriptions = {
   retired:
     'These workshops are no longer maintained. They may contain errors and are not recommended for club use. Here be dragons.',
   start:
-    'Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.',
+    'Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.'
 }
 
 const Track = ({ name, data, ...props }) => (

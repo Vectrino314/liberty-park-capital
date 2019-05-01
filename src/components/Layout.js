@@ -15,17 +15,17 @@ if (typeof window !== 'undefined') {
 }
 
 export default ({ bg, children }) => (
-  <ThemeProvider>
-    <Helmet >
+  <ThemeProvider webfonts>
+    <Helmet defaultTitle={title}>
       <html lang="en" />
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content={theme.colors.primary} />
-      {/* {meta([
+      {meta([
         { name: 'description', content: description },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '' },
+        { name: 'twitter:site', content: '@hackclub' },
         { name: 'twitter:domain', content: url },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
@@ -36,16 +36,15 @@ export default ({ bg, children }) => (
         { property: 'og:image', content: img },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: url },
-      ])} */}
+        { property: 'og:url', content: url }
+      ])}
       {/* <script
         children={`${serviceWorkerKiller.toString()}; serviceWorkerKiller()`}
       /> */}
       <style>
-        @import
-        url('https://fonts.googleapis.com/css?family=Quicksand|Rubik|Arvo|Josefin+Sans|Spectral');
-      </style>
-      {/* <script type="application/ld+json" children={JSON.stringify(org)} /> */}
+@import url('https://fonts.googleapis.com/css?family=Arvo|Josefin+Sans|Righteous');
+</style>
+      <script type="application/ld+json" children={JSON.stringify(org)} />
     </Helmet>
     {bg && <BG color={bg} />}
     {children}

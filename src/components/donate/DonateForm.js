@@ -10,7 +10,7 @@ import {
   Input,
   Label,
   Text,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import { PUBLIC_STRIPE_KEY } from 'constants.js'
 import { toNumber } from 'lodash'
@@ -57,7 +57,7 @@ const Option = ({ amount, ...props }) => [
   />,
   <Amount bg="info" htmlFor={`amount[${amount}]`} key={`label[${amount}]`}>
     <Text.span>${amount}</Text.span>
-  </Amount>,
+  </Amount>
 ]
 
 const Other = styled(Input)`
@@ -72,7 +72,7 @@ class DonateForm extends Component {
     loading: true,
     stripeLoading: true,
     amount: 20,
-    recurring: true,
+    recurring: true
   }
 
   componentWillUnmount() {
@@ -111,7 +111,7 @@ class DonateForm extends Component {
               style={{
                 WebkitAppearance: 'checkbox',
                 MozAppearance: 'checkbox',
-                appearance: 'checkbox',
+                appearance: 'checkbox'
               }}
               checked={recurring}
               onChange={this.handleRecurringChange}
@@ -167,13 +167,13 @@ class DonateForm extends Component {
         image: 'https://hackclub.com/twitter-avatar.png',
         locale: 'auto',
         amount: this.amountInCents(),
-        token: this.handleToken,
+        token: this.handleToken
       })
 
       this.setState({
         stripeLoading: false,
         // loading needs to be explicitly set false so component will render in 'loaded' state.
-        loading: false,
+        loading: false
       })
 
       this.onStripeUpdate(e)
@@ -189,7 +189,7 @@ class DonateForm extends Component {
       panelLabel: this.state.recurring
         ? 'Donate {{amount}} monthly'
         : 'Donate {{amount}}',
-      allowRememberMe: false,
+      allowRememberMe: false
     })
 
     e.preventDefault()

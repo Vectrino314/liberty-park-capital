@@ -62,7 +62,7 @@ class InnerForm extends Component {
       bg,
       email,
       inputProps = {},
-      textProps = {},
+      textProps = {}
     } = this.props
     return (
       <form onSubmit={handleSubmit}>
@@ -119,7 +119,7 @@ class InnerForm extends Component {
 const LoginCodeForm = withFormik({
   mapPropsToValues: ({ params }) => ({ ...params }),
   validationSchema: yup.object().shape({
-    loginCode: yup.string(),
+    loginCode: yup.string()
   }),
   handleSubmit: (unformattedData, { props, setSubmitting, setErrors }) => {
     if (!unformattedData.loginCode) {
@@ -148,6 +148,6 @@ const LoginCodeForm = withFormik({
         setSubmitting(false)
       })
   },
-  displayName: 'LoginCodeForm',
+  displayName: 'LoginCodeForm'
 })(InnerForm)
 export default LoginCodeForm

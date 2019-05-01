@@ -1,9 +1,10 @@
+const path = require('path')
+
+// configure plugins here
 module.exports = {
   siteMetadata: {
-    title: 'Liberty Park',
-    description: 'Demo Site',
-    author: '@gatsbyjs',
-    siteUrl: 'https://demo.ardorem.tech'
+    title: 'Ardorem Technologies',
+    siteUrl: 'https://ardorem.tech'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,30 +13,15 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-json',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'LibertyParkCapital',
-        short_name: 'LPC',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-      },
+        siteUrl: 'https://ardorem.tech'
+      }
     },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './static/logo.png',
+        logo: './static/Ardorem_Sun.svg',
         injectHTML: true,
         icons: {
           android: true,
@@ -51,6 +37,17 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'ArdoRem Technologies',
+        short_name: 'ArdoRem',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#e42d42',
+        display: 'minimal-ui'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
@@ -59,7 +56,12 @@ module.exports = {
         }
       }
     },
-
+    {
+      resolve: 'gatsby-plugin-segment',
+      options: {
+        writeKey: '35oTlU4UqlhIN8VGYmBxAzyDdfzhcscw'
+      }
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -84,8 +86,5 @@ module.exports = {
         ]
       }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    //'gatsby-plugin-offline',
-  ],
+  ]
 }

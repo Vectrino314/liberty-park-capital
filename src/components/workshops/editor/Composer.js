@@ -5,7 +5,7 @@ import {
   IconButton,
   Heading,
   theme,
-  mediaQueries,
+  mediaQueries
 } from '@hackclub/design-system'
 import ReactMarkdown from 'react-markdown'
 
@@ -14,7 +14,7 @@ import MarkdownBody from 'components/MarkdownBody'
 import Name from 'components/Name'
 
 const TwoColumn = styled(Box).attrs({
-  p: [0, 5],
+  p: [0, 5]
 })`
   display: grid;
   grid-template-columns: 1fr;
@@ -86,7 +86,7 @@ export default ({
   value,
   handleInputChange,
   name,
-  description,
+  description
 }) => (
   <TwoColumn view={view}>
     <Sheet p={5}>

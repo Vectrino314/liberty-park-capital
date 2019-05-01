@@ -33,7 +33,7 @@ export default ({ active, toggleModal, name, description }) =>
             storage.set(slug, {
               body,
               edited,
-              description: values.description,
+              description: values.description
             })
             window.location.reload()
             if (slug !== oldSlug) {
@@ -50,7 +50,7 @@ export default ({ active, toggleModal, name, description }) =>
             handleChange,
             handleBlur,
             handleSubmit,
-            isSubmitting,
+            isSubmitting
             /* and other goodies */
           }) => (
             <form onSubmit={handleSubmit}>

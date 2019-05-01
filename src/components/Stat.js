@@ -7,7 +7,7 @@ const Base = styled(Box).attrs({
   mt: 1,
   mb: 1,
   px: [2, 3, 4],
-  align: 'center',
+  align: 'center'
 })`
   display: inline-block;
   line-height: 1;
@@ -45,8 +45,8 @@ Stat.propTypes = {
   fontSize: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.number),
     PropTypes.number,
-    PropTypes.string,
-  ]),
+    PropTypes.string
+  ])
 }
 
 export default Stat

@@ -14,7 +14,7 @@ const InnerForm = ({
   handleBlur,
   handleSubmit,
   isSubmitting,
-  status,
+  status
 }) => (
   <Form color="white" onSubmit={handleSubmit}>
     <Field
@@ -42,7 +42,7 @@ const statusMessage = status =>
   status
     ? {
         success: 'Sent! Check your email 📬',
-        error: 'Something went wrong 😰',
+        error: 'Something went wrong 😰'
       }[status]
     : 'Get your invitation'
 const SlackForm = withFormik({
@@ -52,14 +52,14 @@ const SlackForm = withFormik({
       .string()
       .required('required')
       .email('invalid email address')
-      .matches(/^((?!hackclub\.com).)*$/, 'cannot be @hackclub.com'),
+      .matches(/^((?!hackclub\.com).)*$/, 'cannot be @hackclub.com')
   }),
   enableReinitialize: true,
   handleSubmit: (data, { setSubmitting, setStatus, resetForm }) => {
     api
       .post('v1/slack_invites', {
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       })
       .then(res => {
         resetForm()
@@ -81,6 +81,6 @@ const SlackForm = withFormik({
         setStatus('error')
       })
   },
-  displayName: 'SlackForm',
+  displayName: 'SlackForm'
 })(InnerForm)
 export default SlackForm

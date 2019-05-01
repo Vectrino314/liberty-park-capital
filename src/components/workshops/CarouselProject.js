@@ -7,7 +7,7 @@ import {
   Link as A,
   Text,
   Image,
-  theme,
+  theme
 } from '@hackclub/design-system'
 import Sheet from 'components/Sheet'
 
@@ -15,7 +15,7 @@ const ProjectOuter = styled(Sheet).attrs({
   bg: 'white',
   p: 0,
   mx: [0, 2],
-  mb: 2,
+  mb: 2
 })`
   flex-shrink: 0;
   min-width: 16rem;
@@ -31,19 +31,19 @@ const ProjectOuter = styled(Sheet).attrs({
 const TextBar = styled(Flex).attrs({
   p: 1,
   flexDirection: 'column',
-  justify: ['center', null, 'space-between'],
+  justify: ['center', null, 'space-between']
 })`
   flex-grow: 0;
   align-items: center;
 `
 
 const LinkBar = styled(Flex).attrs({
-  mx: 1,
+  mx: 1
 })``
 
 const DeadLink = styled(Text.span).attrs({
   fontSize: 3,
-  color: 'muted',
+  color: 'muted'
 })`
   text-decoration: line-through;
 `
@@ -51,7 +51,7 @@ const DeadLink = styled(Text.span).attrs({
 const AuthorLabel = styled(Text).attrs({
   mx: 1,
   fontSize: 3,
-  color: 'slate',
+  color: 'slate'
 })`
   white-space: nowrap;
   strong {
@@ -60,7 +60,7 @@ const AuthorLabel = styled(Text).attrs({
 `
 
 const ImageWrapper = styled(Box).attrs({
-  mb: [0, null, 2],
+  mb: [0, null, 2]
 })`
   padding-bottom: 50%;
   position: relative;

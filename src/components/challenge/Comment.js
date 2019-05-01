@@ -6,7 +6,7 @@ import {
   Text,
   IconButton,
   theme,
-  cx,
+  cx
 } from '@hackclub/design-system'
 import Gravatar from 'react-gravatar'
 import ReactMarkdown from 'react-markdown'
@@ -149,7 +149,7 @@ class Comment extends Component {
       user,
       body,
       onReply,
-      onDelete,
+      onDelete
     } = this.props
     const emoji = onlyContainsEmoji(body)
     return (
@@ -210,5 +210,5 @@ Comment.propTypes = {
   body: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
   onReply: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
 }
