@@ -36,7 +36,7 @@
     "gatsby-transformer-json": "^2.1.10",
     "gatsby-transformer-remark": "^2.3.3",
     "gatsby-transformer-sharp": "^2.1.18",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "nuka-carousel": "^4.5.2",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
