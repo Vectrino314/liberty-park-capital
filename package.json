@@ -38,7 +38,7 @@
     "gatsby-transformer-sharp": "^2.1.18",
     "lodash": "^4.17.11",
     "nuka-carousel": "^4.5.2",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-autocomplete": "^1.8.1",
